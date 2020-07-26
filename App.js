@@ -3,40 +3,36 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 
 export default class App extends React.Component {
   state={
-    username:"",
+    email:"",
     password:""
   }
   render(){
     return (
       <View style={styles.container}>
-        <Text style={styles.logo}>Welcome back, {"\n"} Name</Text>
+        <Text style={styles.logo}>HeyAPP</Text>
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
-            placeholder="Username" 
-            placeholderTextColor="white"
-            onChangeText={text => this.setState({username:text})}/>
-        </View>
-        <View style={styles.underline}>
+            placeholder="Email..." 
+            placeholderTextColor="#003f5c"
+            onChangeText={text => this.setState({email:text})}/>
         </View>
         <View style={styles.inputView} >
           <TextInput  
             secureTextEntry
             style={styles.inputText}
-            placeholder="Password" 
-            placeholderTextColor="white"
+            placeholder="Password..." 
+            placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({password:text})}/>
         </View>
-        <View style={styles.underline}>
-        </View>
-        <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText}>Log In</Text>
-        </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.loginText}>LOGIN</Text>
+        </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.signUpText}>Not your account?{"\n"}Sign Up</Text>
+          <Text style={styles.loginText}>Signup</Text>
         </TouchableOpacity>
 
   
@@ -48,61 +44,44 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EE736A',
+    backgroundColor: '#003f5c',
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo:{
     fontWeight:"bold",
-    fontSize:40,
-    color:"#FFFFFF",
+    fontSize:50,
+    color:"#fb5b5a",
     marginBottom:40
   },
   inputView:{
     width:"80%",
-    backgroundColor:"transparent",
+    backgroundColor:"#465881",
     borderRadius:25,
     height:50,
-    marginBottom:0,
+    marginBottom:20,
     justifyContent:"center",
     padding:20
   },
   inputText:{
     height:50,
-    color:"white",
-    fontWeight:"bold",
+    color:"white"
   },
   forgot:{
-    color:"black",
-    fontSize:16,
-    marginBottom:40
+    color:"white",
+    fontSize:11
   },
   loginBtn:{
     width:"80%",
-    backgroundColor:"#rgba(133, 255, 216, 0.9)",
+    backgroundColor:"#fb5b5a",
     borderRadius:25,
     height:50,
     alignItems:"center",
     justifyContent:"center",
-    marginTop:100,
-    marginBottom:40
+    marginTop:40,
+    marginBottom:10
   },
   loginText:{
-    fontWeight:"bold",
-    color:"black",
-    fontSize:18
-  },
-  signUpText:{
-    color:"black",
-    fontSize:16,
-    textAlign: 'center'
-  },
-  underline:{
-    height: 0,
-    width: 260,
-    borderTopColor: "white",
-    borderTopWidth: 2,
-    marginTop: 0,
-    marginBottom:20
+    color:"white"
   }
 });

@@ -1,32 +1,125 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+export default class App extends React.Component {
+  state={
+    name:"",
+    username:"",
+    email:"",
+    password:""
+  }
+  render(){
+    return (
+      <View style={styles.container}>
+        <Text style={styles.logo}>Welcome to Oasis</Text>
+        <View style={styles.inputView} >
+          <TextInput  
+            style={styles.inputText}
+            placeholder="Name" 
+            placeholderTextColor="white"
+            onChangeText={text => this.setState({name:text})}/>
+        </View>
+        <View style={styles.underline}>
+        </View>
+        <View style={styles.inputView} >
+          <TextInput  
+            style={styles.inputText}
+            placeholder="Username" 
+            placeholderTextColor="white"
+            onChangeText={text => this.setState({username:text})}/>
+        </View>
+        <View style={styles.underline}>
+        </View>
+        <View style={styles.inputView} >
+          <TextInput  
+            style={styles.inputText}
+            placeholder="Email" 
+            placeholderTextColor="white"
+            onChangeText={text => this.setState({email:text})}/>
+        </View>
+        <View style={styles.underline}>
+        </View>
+        <View style={styles.inputView} >
+          <TextInput  
+            secureTextEntry
+            style={styles.inputText}
+            placeholder="Password" 
+            placeholderTextColor="white"
+            onChangeText={text => this.setState({password:text})}/>
+        </View>
+        <View style={styles.underline}>
+        </View>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.loginText}>Sign Up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.signUpText}>Already have an account?{"\n"}Log in</Text>
+        </TouchableOpacity>
 
-export default function TabTwoScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-    </View>
-  );
+  
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#EE736A',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  logo:{
+    fontWeight:"bold",
+    fontSize:33,
+    color:"#FFFFFF",
+    marginBottom:40
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  inputView:{
+    width:"80%",
+    backgroundColor:"transparent",
+    borderRadius:25,
+    height:50,
+    marginBottom:0,
+    justifyContent:"center",
+    padding:20
   },
+  inputText:{
+    height:50,
+    color:"white",
+    fontWeight:"bold",
+  },
+  forgot:{
+    color:"black",
+    fontSize:16,
+    marginBottom:40
+  },
+  loginBtn:{
+    width:"80%",
+    backgroundColor:"#rgba(133, 255, 216, 0.9)",
+    borderRadius:25,
+    height:50,
+    alignItems:"center",
+    justifyContent:"center",
+    marginTop:100,
+    marginBottom:40
+  },
+  loginText:{
+    fontWeight:"bold",
+    color:"black",
+    fontSize:18
+  },
+  signUpText:{
+    color:"black",
+    fontSize:16,
+    textAlign: 'center'
+  },
+  underline:{
+    height: 0,
+    width: 260,
+    borderTopColor: "white",
+    borderTopWidth: 2,
+    marginTop: 0,
+    marginBottom:20
+  }
 });
