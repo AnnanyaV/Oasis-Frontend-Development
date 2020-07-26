@@ -8,7 +8,11 @@ import AudioPostButton from '../components/AudioPostButton'
 export default function PostOptions() {
     return (
         <View>
-            <LinearGradient colors={['#91BDC0', '#91BDC0', '#91BDC0']}>
+            <LinearGradient 
+            colors={['#414066', '#91BDC0', '#91BDC0']}
+            locations = {[0, 0.9, 1]}
+            start = {{ x: 0, y: 0 }}
+            end = {{ x: 1, y: 1 }}>
                 <View style = {styles.background}>
                         <Text style = {styles.postText}>What would you like to post?</Text>
 
