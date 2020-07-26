@@ -20,6 +20,8 @@ export default class App extends React.Component {
             height: 600,
           }}
         />
+       
+
         <Text style={styles.logo}>Welcome back, {"\n"} Name</Text>
         <View style={styles.inputView} >
           <TextInput  
@@ -44,7 +46,7 @@ export default class App extends React.Component {
           <Text style={styles.loginText}>Log In</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.forgot}>Forgot Password?</Text>
+          <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.signUpText}>Not your account?{"\n"}Sign Up</Text>
