@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class App extends React.Component {
   state={
@@ -11,6 +12,16 @@ export default class App extends React.Component {
   render(){
     return (
       <View style={styles.container}>
+        <LinearGradient
+          colors={['#726984', '#EE736A']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            height: 600,
+          }}
+        />
         <Text style={styles.logo}>Welcome to Oasis</Text>
         <View style={styles.inputView} >
           <TextInput  
