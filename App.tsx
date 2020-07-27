@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState} from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
+import PostOptions from './screens/PostOptions'
+import LoadingPage from './screens/LoadingPage';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -15,8 +19,9 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
-        <StatusBar />
+        {/* <Navigation colorScheme={colorScheme} />
+        <StatusBar /> */}
+        <PostOptions></PostOptions>
       </SafeAreaProvider>
     );
   }

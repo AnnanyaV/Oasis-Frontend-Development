@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-export default function VisualPostButton(props) {
+export default function VisualPostButton(props: any) {
     return(
         <TouchableOpacity>
         <View style = {styles.visualButton}>
