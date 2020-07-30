@@ -7,7 +7,7 @@ import { AppLoading } from 'expo';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
-import Profile from './screens/Profile'
+import PostOptions from './screens/PostOptions'
 import LoadingPage from './screens/LoadingPage';
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <Profile></Profile>
+        <PostOptions></PostOptions>
       </SafeAreaProvider>
     );
   }
