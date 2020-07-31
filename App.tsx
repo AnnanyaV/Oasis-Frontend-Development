@@ -9,6 +9,8 @@ import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 import PostOptions from './screens/PostOptions'
 import LoadingPage from './screens/LoadingPage';
+import Moment from './screens/Moment'
+import Moment2 from './screens/Moment2'
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -21,7 +23,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <PostOptions></PostOptions>
+        <Moment2></Moment2>
       </SafeAreaProvider>
     );
   }
