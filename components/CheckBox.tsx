@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
-export default function BackArrow(props: any) {
+export default function CheckBox(props: any) {
   return (
     <TouchableOpacity>
-      <View style={styles.uploadButton}>
+      <View style={styles.visualButton}>
         <Image
-          style={styles.arrow}
-          source={require("../assets/images/backArrow.png")}
+          style={styles.check}
+          source={require("../assets/images/check.png")}
         />
       </View>
     </TouchableOpacity>
@@ -15,17 +15,17 @@ export default function BackArrow(props: any) {
 }
 
 const styles = StyleSheet.create({
-  uploadButton: {
+  visualButton: {
     justifyContent: "center",
     alignItems: "center",
-
     position: "absolute",
+    width: 187,
+    height: 39,
+    left: 94,
+    top: 300,
 
-    left: 13.67,
-    top: 51.33,
-    paddingTop: 10,
-
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+    backgroundColor: "#85FFD8",
+    // boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
     borderRadius: 35,
     shadowColor: "#000000",
     shadowOpacity: 0.2,
@@ -34,7 +34,12 @@ const styles = StyleSheet.create({
       height: 3,
     },
   },
-  arrow: {
-    tintColor: "#FFFFFF",
+  visualPostText: {
+    fontFamily: "Montserrat-Bold",
+    fontSize: 28,
+    color: "#767676",
+  },
+  check: {
+    backgroundColor: "#85FFD8",
   },
 });

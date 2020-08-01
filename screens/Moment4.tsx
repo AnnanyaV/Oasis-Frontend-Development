@@ -5,10 +5,12 @@ import UploadButton from "../components/UploadButton";
 import BackArrow from "../components/BackArrow";
 import Next from "../components/Next";
 import VisualUpload from "../components/VisualUpload";
-import AddAudioButton from "../components/AddAudioButton";
+import CheckBox from "../components/CheckBox";
 import AddCaption from "../components/AddCaption";
 import DeletePost from "../components/DeletePost";
 import RightArrow from "../components/RightArrow";
+import LeftArrow from "../components/LeftArrow";
+////Going to use this slider: https://github.com/NesChaiyapon/react-native-simple-slider
 export default function Moment2() {
   return (
     <View>
@@ -23,7 +25,7 @@ export default function Moment2() {
           <Text style={styles.postText}>New Visual</Text>
           <VisualUpload></VisualUpload>
           <RightArrow></RightArrow>
-          <AddAudioButton></AddAudioButton>
+          <CheckBox title={"7:32"}></CheckBox>
           <AddCaption></AddCaption>
           <DeletePost title={"Delete my post after 24 hours"}></DeletePost>
           <Next title={"POST"}></Next>

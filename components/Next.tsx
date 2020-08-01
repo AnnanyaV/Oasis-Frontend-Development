@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: 256,
     height: 53,
-    left: 70,
-    top: 649,
+    left: 59,
+    top: 664,
     flexDirection: "row",
     backgroundColor: "#F07167",
     // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
