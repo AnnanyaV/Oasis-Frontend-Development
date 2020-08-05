@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { NavigationContainer } from '@react-navigation/native';
+import Login from './Login'
 
+function LoadingPage({navigation} : { navigation: any}) {
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         navigation.navigate('Login')
+      }, 1000);
+      return () => clearTimeout(timer);
+   }, []);
 
-export default function LoadingPage() {
     return (
        <View>
           <ImageBackground
@@ -24,6 +32,8 @@ export default function LoadingPage() {
        </View>
     )
 }
+
+export default LoadingPage;
 
 const styles = StyleSheet.create({
    background: {
