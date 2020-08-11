@@ -14,6 +14,10 @@ import Moment2 from "./screens/Moment2";
 import Moment3 from "./screens/Moment3";
 import Moment4 from "./screens/Moment4";
 import Odio from './screens/Odio'
+import NotificationPage from './screens/NotificationPage'
+import Login from './screens/Login'
+import SIgnup from './screens/SIgnup'
+
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -26,7 +30,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <Odio></Odio>
+        <Login></Login>
       </SafeAreaProvider>
     );
   }
