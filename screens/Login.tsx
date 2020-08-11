@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
+import { withNavigation } from 'react-navigation';
 
 
 
@@ -26,7 +26,7 @@ class LoginPage extends React.Component {
        
 
         <Text style={styles.logo}>Welcome back, {"\n"} Name</Text>
-        <View style={styles.inputView} >
+        <View style={styles.inputView}>
           <TextInput  
             style={styles.inputText}
             placeholder="Username" 
@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
         </View>
         <View style={styles.underline}>
         </View>
-        <View style={styles.inputView} >
+        <View style={styles.inputView}>
           <TextInput  
             secureTextEntry
             style={styles.inputText}
@@ -51,7 +51,7 @@ class LoginPage extends React.Component {
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
           <Text style={styles.signUpText}>Not your account?{"\n"}Sign Up</Text>
           {/* <GoToButton screenName="Signup"/> */}
         </TouchableOpacity>
@@ -62,7 +62,7 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default withNavigation(LoginPage);
 
 
 // function GoToButton({ screenName } : {screenName: any}) {
@@ -73,7 +73,7 @@ export default LoginPage;
 //       title={`Go to ${screenName}`}
 //       onPress={() => navigation.navigate(screenName)}
 //       </TouchableOpacity>
-//   );
+//   )
 // }
 
 const styles = StyleSheet.create({

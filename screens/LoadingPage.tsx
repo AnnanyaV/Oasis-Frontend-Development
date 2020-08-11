@@ -8,7 +8,7 @@ function LoadingPage({navigation} : { navigation: any}) {
    useEffect(() => {
       const timer = setTimeout(() => {
          navigation.navigate('Login')
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timer);
    }, []);
 

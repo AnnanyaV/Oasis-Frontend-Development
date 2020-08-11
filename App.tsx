@@ -69,7 +69,7 @@ const App = () => {
       <Stack.Navigator initialRouteName="LoadingPage">
         <Stack.Screen options={{headerShown: false}} name="LoadingPage" component={LoadingPage} />
         <Stack.Screen options={{headerShown: false}} name="Login" component={Login} />
-        <Stack.Screen options={{headerShown: false}} name="Signup" component={Signup} />
+        {/* <Stack.Screen options={{headerShown: false}} name="Signup" component={Signup} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

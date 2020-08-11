@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function AudioPostButton(props) {
+export default function AudioPostButton(props: { title: React.ReactNode; }) {
     return(
         <TouchableOpacity>
         <View style = {styles.audioButton}>
