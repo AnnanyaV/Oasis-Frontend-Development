@@ -10,7 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
-import PostOptions from './screens/PostOptions'
+import Profile from './screens/Profile'
 import LoadingPage from './screens/LoadingPage';
 import Login from './screens/Login';
 import Signup from './screens/Signup';
