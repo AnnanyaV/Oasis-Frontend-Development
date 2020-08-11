@@ -3,7 +3,8 @@ import {
     AppRegistry,
     StyleSheet, 
     View,
-    Text
+    Text,
+    Dimensions
 } from 'react-native';
 
 
@@ -11,15 +12,14 @@ export default class Bar extends Component {
     render(){
         return (
             <View style={styles.bar}>
-                <View style={[styles.barItem, styles.barseparator]}>
-                    <Text style={StyleSheet.barTop}>12K</Text>
-                    <Text style={StyleSheet.barBottom}>Followers</Text>
-                </View>
+                
 
                 <View style={styles.barItem}>
-                    <Text style={StyleSheet.barTop}>322</Text>
-                    <Text style={StyleSheet.barBottom}>Following</Text>
+                    <Text style={styles.barTop}>TOBE NWIGWE</Text>
+                    <Text style={styles.barBottom}>@MUSICIAN</Text>
                 </View>
+
+             
 
             </View>
             
@@ -29,29 +29,33 @@ export default class Bar extends Component {
 
 const styles = StyleSheet.create({
     bar: {
-        borderTopColor: '#fff',
-        borderTopWidth: 4,
-        backgroundColor: '#ec2e4a',
-        flexDirection: 'row'
-    },
-    barseparator: {
-        borderRightWidth: 4
+        width:(Dimensions.get('window').width ) ,
+        height: 250,
+        borderRadius: 40,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+        backgroundColor: '#545d60',
+        opacity: .975,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        top:-90,
     },
     barTop: {
         color: '#fff',
-        fontSize: 16,
+        fontSize: 24,
         fontWeight: 'bold',
-        fontStyle: 'italic'
+        
     },
     barItem: {
-    flex: 1,
+    flex: 0,
     padding: 18,
     alignItems: 'center',
     },
     barBottom: {
-        color: '#000',
+        color: '#fff',
         fontSize: 14,
-        fontWeight: 'bold',
+        
+        
     }
 
 });

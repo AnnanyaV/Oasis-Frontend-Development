@@ -11,9 +11,24 @@ import {
 export default class PhotoGrid extends Component {
     render(){
         return (
-            <ScrollView>
+            <ScrollView style={styles.scroll}>
                 <View style ={styles.photoGrid}>
 
+                    <View style={styles.photoWrap}>
+                        <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
+                    </View>
+                    <View style={styles.photoWrap}>
+                        <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
+                    </View>
+                    <View style={styles.photoWrap}>
+                        <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
+                    </View>
+                    <View style={styles.photoWrap}>
+                        <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
+                    </View>
+                    <View style={styles.photoWrap}>
+                        <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
+                    </View>
                     <View style={styles.photoWrap}>
                         <Image style={styles.photo} source={require('../assets/images/profile-photo.jpg')} />
                     </View>
@@ -27,18 +42,20 @@ export default class PhotoGrid extends Component {
 
 const styles = StyleSheet.create({
     photoGrid: {
+        width: (Dimensions.get('window').width ),
         flexDirection: 'row',
         flexWrap: 'wrap'
     },
     photoWrap: {
-        margin: 2,
-        height: 120,
-        width: (Dimensions.get('window').width / 2) - 4,
+        height: 250,
+        width: (Dimensions.get('window').width / 2),
     },
     photo: {
         flex: 1,
-        width: null,
-        alignSelf: 'stretch'
+        width: null, 
+    },
+    scroll: {
+        top: -90,
     }
 
 });

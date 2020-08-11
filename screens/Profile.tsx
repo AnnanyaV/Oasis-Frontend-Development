@@ -6,8 +6,7 @@ import {
 } from 'react-native';
 
 import Header    from '../components/Header';
-import Bar       from '../components/Bar';
-import PhotoGrid from '../components/PhotoGrid';
+
 
 export default class Profile extends Component {
     render(){
@@ -15,8 +14,8 @@ export default class Profile extends Component {
             <View style={styles.container}>
                 
                 <Header />
-                <Bar />
-                <PhotoGrid />
+                
+                
 
             </View>
         );
@@ -31,4 +30,4 @@ const styles = StyleSheet.create({
 
 });
 
-AppRegistry.registerComponent('Profile',() => Profile);
+AppRegistry.registerComponent('Profile', () => Profile);

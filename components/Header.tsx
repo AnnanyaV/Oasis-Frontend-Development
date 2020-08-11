@@ -8,20 +8,26 @@ import {
     ImageBackground,
 } from 'react-native';
 
+import Bar       from '../components/Bar';
+import PhotoGrid from '../components/PhotoGrid';
+
 export default class Header extends Component {
     render(){
         return (
 
-            <ImageBackground style={styles.headerBackground} source={require('../assets/images/profile-coverphoto.jpg')}>
-                
+            <ImageBackground style={styles.headerBackground} source={require('../assets/images/profile-coverphoto.jpg')}>  
+
+                    <Image style={styles.icons} source={require('../assets/images/favicon.png')} />
+                    <Image style={styles.icons} source={require('../assets/images/favicon.png')} />
+
                 <View style={styles.header}>
-                
+                    
                     <View style={styles.profilepicWrap}>
                         <Image style={styles.profilepic} source={require('../assets/images/profile-photo.jpg')} />
                     </View>
-
-                    <Text style ={styles.name}>TOBE NWIGWE</Text>
-                    <Text style ={styles.pos}>- MUSICIAN -</Text>
+                    
+                    <Bar />
+                    <PhotoGrid /> 
                     
                 </View>
 
@@ -34,41 +40,29 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
     headerBackground: {
         flex: 1,
-        width: null,
-        alignSelf: 'stretch'
+    },
+    icons: {
+        height: 45,
+        width: 45,
+        alignSelf: 'flex-end',
+        marginLeft: -200,       
     },
     header: {
-        flex:1,
+        flex:0,
         alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
-        backgroundColor: 'rgba(0,0,0, 0.5)',
     },
     profilepicWrap: {
-        width: 180,
-        height: 180,
-        borderRadius: 100,
-        borderColor: 'rgba(0,0,0, 0.4)',
-        borderWidth: 16,
-    },
+        width: 140,
+        top: 20,
+        height: 140,
+        marginBottom: 23
+     },
     profilepic: {
         flex: 1,
+        top: -90,
         width: null,
         alignSelf: 'stretch',
         borderRadius: 100,
-        borderColor: '#fff',
-        borderWidth: 4
     },
-    name: {
-        marginTop: 20,
-        fontSize: 16,
-        color: '#fff',
-        fontWeight: 'bold'
-    },
-    pos: {
-        fontSize: 14,
-        color: '#0394c0',
-        fontWeight: '300',
-        fontStyle: 'italic'
-    }
+    
 });
