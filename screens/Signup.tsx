@@ -64,6 +64,7 @@ export default class App extends React.Component {
           <Text style={styles.loginText}>Sign Up</Text>
         </TouchableOpacity>
         <TouchableOpacity>
+          onPress={() => navigation.navigate(Signup)}
           <Text style={styles.signUpText}>Already have an account?{"\n"}Log in</Text>
         </TouchableOpacity>
 

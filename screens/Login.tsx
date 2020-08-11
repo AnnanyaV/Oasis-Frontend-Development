@@ -3,16 +3,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 
-function GoToButton({ screenName } : {screenName: any}) {
-  const navigation = useNavigation();
 
-  return (
-    <TouchableOpacity>
-      title={`Go to ${screenName}`}
-      onPress={() => navigation.navigate(screenName)}
-      </TouchableOpacity>
-  );
-}
 
 class LoginPage extends React.Component {
   state={
@@ -62,7 +53,7 @@ class LoginPage extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.signUpText}>Not your account?{"\n"}Sign Up</Text>
-          <GoToButton screenName="Signup"/>
+          {/* <GoToButton screenName="Signup"/> */}
         </TouchableOpacity>
 
       </View>
@@ -72,6 +63,18 @@ class LoginPage extends React.Component {
 }
 
 export default LoginPage;
+
+
+// function GoToButton({ screenName } : {screenName: any}) {
+//   const navigation = useNavigation();
+
+//   return (
+//     <TouchableOpacity>
+//       title={`Go to ${screenName}`}
+//       onPress={() => navigation.navigate(screenName)}
+//       </TouchableOpacity>
+//   );
+// }
 
 const styles = StyleSheet.create({
   container: {
