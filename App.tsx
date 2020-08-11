@@ -55,7 +55,7 @@ import Signup from './screens/Signup';
 //   } else {
 //     return (
 //       <SafeAreaProvider>
-//         <Login></Login>
+//         <LoadingPage></LoadingPage>
 //       </SafeAreaProvider>
 //     );
 //   }
@@ -66,7 +66,8 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="LoadingPage">
+        <Stack.Screen options={{headerShown: false}} name="LoadingPage" component={LoadingPage} />
         <Stack.Screen options={{headerShown: false}} name="Login" component={Login} />
         <Stack.Screen options={{headerShown: false}} name="Signup" component={Signup} />
       </Stack.Navigator>
@@ -75,3 +76,4 @@ const App = () => {
 }
 
 export default App;
+
