@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         width: null, 
     },
     scroll: {
-        top: -90,
+        top: -60,
     }
 
 });

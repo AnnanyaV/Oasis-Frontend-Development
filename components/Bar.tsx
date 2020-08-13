@@ -12,14 +12,20 @@ export default class Bar extends Component {
     render(){
         return (
             <View style={styles.bar}>
-                
 
                 <View style={styles.barItem}>
                     <Text style={styles.barTop}>TOBE NWIGWE</Text>
-                    <Text style={styles.barBottom}>@MUSICIAN</Text>
+                    <Text style={styles.barBottom}>@tnwigwe</Text>
+                    <Text style={styles.barBottom}>musician and non-profit ceo</Text>
                 </View>
-
-             
+                <View style={styles.barItem}>
+                    <Text style={styles.barTop}>    10      120    2,040 </Text>
+                    <Text style={styles.barBottom}>post      following    followers</Text>
+                </View>
+                <View style={styles.odioBar}>
+                    <Text style={styles.momentItem}>MOMENT</Text>
+                    <Text style={styles.odioItem}>ODIO</Text>
+                </View>
 
             </View>
             
@@ -36,26 +42,50 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 0,
         backgroundColor: '#545d60',
         opacity: .975,
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center',
-        top:-90,
+        top:-60,
     },
     barTop: {
         color: '#fff',
         fontSize: 24,
-        fontWeight: 'bold',
-        
+        fontWeight: 'bold',    
     },
     barItem: {
     flex: 0,
     padding: 18,
     alignItems: 'center',
     },
+    odioBar:{
+        flexDirection: 'row',
+        padding: 18,
+        flex:1,
+        borderBottomColor: 'rgba(0,0,0,0)',
+        borderBottomWidth: 0,
+    },
+    odioItem:{
+        color: '#fff',
+        fontSize: 20,
+        fontWeight: '700',
+        padding: 10,
+        paddingHorizontal: 95,
+        marginLeft:-70,
+        borderBottomColor: 'rgba(0,0,0,0)',
+        borderBottomWidth: 78,
+    },
+    momentItem:{
+        color: '#fff',
+        fontSize: 20,
+        fontWeight: '700',
+        padding: 10,
+        paddingHorizontal: 95,
+        marginLeft:-70,
+        borderBottomColor: 'rgb(0,0,0)',
+        borderBottomWidth: 78,
+    },
     barBottom: {
         color: '#fff',
-        fontSize: 14,
-        
-        
+        fontSize: 14,  
     }
 
 });

@@ -16,10 +16,10 @@ export default class Header extends Component {
         return (
 
             <ImageBackground style={styles.headerBackground} source={require('../assets/images/profile-coverphoto.jpg')}>  
-
-                    <Image style={styles.icons} source={require('../assets/images/favicon.png')} />
-                    <Image style={styles.icons} source={require('../assets/images/favicon.png')} />
-
+                    <View style={styles.container}>
+                        <Image style={styles.icons} source={require('../assets/images/settings-icon.png')} />
+                        <Image style={styles.icons} source={require('../assets/images/edit-icon.png')} />
+                    </View>
                 <View style={styles.header}>
                     
                     <View style={styles.profilepicWrap}>
@@ -41,11 +41,16 @@ const styles = StyleSheet.create({
     headerBackground: {
         flex: 1,
     },
+    container:{
+        flexWrap:'wrap',
+        flexDirection:'row-reverse',
+    },
     icons: {
-        height: 45,
-        width: 45,
+        height: 40,
+        width: 40,
         alignSelf: 'flex-end',
-        marginLeft: -200,       
+        marginTop: 30,  
+        marginHorizontal:5,     
     },
     header: {
         flex:0,
@@ -59,7 +64,7 @@ const styles = StyleSheet.create({
      },
     profilepic: {
         flex: 1,
-        top: -90,
+        top: -60,
         width: null,
         alignSelf: 'stretch',
         borderRadius: 100,
