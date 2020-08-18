@@ -14,17 +14,17 @@ export default class Bar extends Component {
             <View style={styles.bar}>
 
                 <View style={styles.barItem}>
-                    <Text style={styles.barTop}>TOBE NWIGWE</Text>
-                    <Text style={styles.barBottom}>@tnwigwe</Text>
-                    <Text style={styles.barBottom}>musician and non-profit ceo</Text>
+                    <Text style={styles.infoTop}>Tobe Nwigwe</Text>
+                    <Text style={styles.infoBottom}>@tnwigwe</Text>
+                    <Text style={styles.infoBottom}>musician and non-profit ceo</Text>
                 </View>
                 <View style={styles.barItem}>
-                    <Text style={styles.barTop}>    10      120    2,040 </Text>
-                    <Text style={styles.barBottom}>post      following    followers</Text>
+                    <Text style={styles.statsTop}>    10           120        2,040 </Text>
+                    <Text style={styles.statsBottom}>  Posts               Following             Followers</Text>
                 </View>
                 <View style={styles.odioBar}>
-                    <Text style={styles.momentItem}>MOMENT</Text>
-                    <Text style={styles.odioItem}>ODIO</Text>
+                    <Text style={styles.odioItem}>VISUAL</Text>
+                    <Text style={styles.odioItem}>AUDIO</Text>
                 </View>
 
             </View>
@@ -46,10 +46,26 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         top:-60,
     },
-    barTop: {
-        color: '#fff',
-        fontSize: 24,
+    statsTop: {
+        color: '#cf6d66',
+        fontSize: 28,
         fontWeight: 'bold',    
+    },
+    statsBottom: {
+        color: '#fff',
+        fontSize: 14,  
+    },
+    infoTop: {
+        color: '#fff',
+        fontSize: 25,
+        fontFamily:"Montserrat-Bold",
+       marginTop:-10,
+    },
+    infoBottom:{
+        color: '#fff',
+        fontSize: 18,
+        marginTop:2,
+        marginBottom:3,
     },
     barItem: {
     flex: 0,
@@ -60,32 +76,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 18,
         flex:1,
-        borderBottomColor: 'rgba(0,0,0,0)',
-        borderBottomWidth: 0,
+        borderBottomColor: 'rgba(129,238,203,1)',
+        borderBottomWidth: 4,
+        width:188,
     },
     odioItem:{
+        flex:1,
         color: '#fff',
         fontSize: 20,
-        fontWeight: '700',
+        fontWeight: '600',
         padding: 10,
-        paddingHorizontal: 95,
-        marginLeft:-70,
-        borderBottomColor: 'rgba(0,0,0,0)',
-        borderBottomWidth: 78,
-    },
-    momentItem:{
-        color: '#fff',
-        fontSize: 20,
-        fontWeight: '700',
-        padding: 10,
-        paddingHorizontal: 95,
-        marginLeft:-70,
+        paddingHorizontal: 165,
+        marginLeft:-130,
         borderBottomColor: 'rgb(0,0,0)',
         borderBottomWidth: 78,
+        marginTop:-10
     },
-    barBottom: {
-        color: '#fff',
-        fontSize: 14,  
-    }
+   
 
 });
