@@ -51,7 +51,7 @@ class LoginPage extends React.Component {
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
+        <TouchableOpacity>
           <Text style={styles.signUpText}>Not your account?{"\n"}Sign Up</Text>
           {/* <GoToButton screenName="Signup"/> */}
         </TouchableOpacity>
@@ -62,7 +62,7 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withNavigation(LoginPage);
+export default LoginPage;
 
 
 // function GoToButton({ screenName } : {screenName: any}) {
