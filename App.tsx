@@ -16,7 +16,7 @@ import Moment4 from "./screens/Moment4";
 import Odio from './screens/Odio'
 import NotificationPage from './screens/NotificationPage'
 import Login from './screens/Login'
-import SIgnup from './screens/SIgnup'
+import Signup from './screens/SIgnup'
 
 
 export default function App() {
