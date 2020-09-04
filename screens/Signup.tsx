@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default class Signup extends React.Component {
+export default class SignupPage extends React.Component {
   state={
     name:"",
     username:"",
