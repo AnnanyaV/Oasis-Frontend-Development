@@ -16,7 +16,7 @@ import Moment4 from "./screens/Moment4";
 import Odio from './screens/Odio'
 import NotificationPage from './screens/NotificationPage'
 import Login from './screens/Login'
-import SIgnup from './screens/SIgnup'
+import Signup from './screens/Signup'
 
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <Login></Login>
+        <Odio></Odio>
       </SafeAreaProvider>
     );
   }
