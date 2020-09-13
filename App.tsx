@@ -15,9 +15,15 @@ import Moment3 from "./screens/Moment3";
 import Moment4 from "./screens/Moment4";
 import Odio from './screens/Odio'
 import NotificationPage from './screens/NotificationPage'
-import Login from './screens/Login'
-import Signup from './screens/SIgnup'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginPage from './screens/Login';
+import SignupPage from './screens/Signup';
+import { RouteParamList } from "./navigation/RouteParameterList";
+import { Routes } from "./navigation/Routes";
 
+
+export const Stack = createStackNavigator<RouteParamList>();
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -27,11 +33,15 @@ export default function App() {
     return null;
   } else {
     return (
+      // <SafeAreaProvider>
+      //   {/* <Navigation colorScheme={colorScheme} />
+      //   <StatusBar /> */}
+      //     <LoginPage></LoginPage>
+      //     {/* <HomeStack /> */}
+      // </SafeAreaProvider>
       <SafeAreaProvider>
-        {/* <Navigation colorScheme={colorScheme} />
-        <StatusBar /> */}
-        <Login></Login>
+        <Routes />
       </SafeAreaProvider>
-    );
+      );
   }
 }
