@@ -1,77 +1,76 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { RouteStackParamList } from '../navigation/RouteParameterList';
 
-export default class SignupPage extends React.Component {
-  state={
-    name:"",
-    username:"",
-    email:"",
-    password:""
-  }
-  render(){
-    return (
-      <View style={styles.container}>
-        <LinearGradient
-          colors={['#726984', '#EE736A']}
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            top: 0,
-            height: 600,
-          }}
-        />
-        <Text style={styles.logo}>Welcome to Oasis</Text>
-        <View style={styles.inputView} >
-          <TextInput  
-            style={styles.inputText}
-            placeholder="Name" 
-            placeholderTextColor="white"
-            onChangeText={text => this.setState({name:text})}/>
-        </View>
-        <View style={styles.underline}>
-        </View>
-        <View style={styles.inputView} >
-          <TextInput  
-            style={styles.inputText}
-            placeholder="Username" 
-            placeholderTextColor="white"
-            onChangeText={text => this.setState({username:text})}/>
-        </View>
-        <View style={styles.underline}>
-        </View>
-        <View style={styles.inputView} >
-          <TextInput  
-            style={styles.inputText}
-            placeholder="Email" 
-            placeholderTextColor="white"
-            onChangeText={text => this.setState({email:text})}/>
-        </View>
-        <View style={styles.underline}>
-        </View>
-        <View style={styles.inputView} >
-          <TextInput  
-            secureTextEntry
-            style={styles.inputText}
-            placeholder="Password" 
-            placeholderTextColor="white"
-            onChangeText={text => this.setState({password:text})}/>
-        </View>
-        <View style={styles.underline}>
-        </View>
-        <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText}>Sign Up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.signUpText}>Already have an account?{"\n"}Log in</Text>
-          {/* onPress={() => navigation.navigate(Signup)} */}
-        </TouchableOpacity>
-
-  
+export default function SignupPage ({navigation, route}: RouteStackParamList<"SignUpPage">) {
+  // state={
+  //   name:"",
+  //   username:"",
+  //   email:"",
+  //   password:""
+  // }
+  return (
+    <View style={styles.container}>
+      <LinearGradient
+        colors={['#726984', '#EE736A']}
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 600,
+        }}
+      />
+      <Text style={styles.logo}>Welcome to Oasis</Text>
+      <View style={styles.inputView} >
+        <TextInput  
+          style={styles.inputText}
+          placeholder="Name" 
+          placeholderTextColor="white"
+          onChangeText={text => console.log("tbd, setstate name")}/>
       </View>
-    );
-  }
+      <View style={styles.underline}>
+      </View>
+      <View style={styles.inputView} >
+        <TextInput  
+          style={styles.inputText}
+          placeholder="Username" 
+          placeholderTextColor="white"
+          onChangeText={text => console.log("tbd, setstate username")}/>
+      </View>
+      <View style={styles.underline}>
+      </View>
+      <View style={styles.inputView} >
+        <TextInput  
+          style={styles.inputText}
+          placeholder="Email" 
+          placeholderTextColor="white"
+          onChangeText={text => console.log("tbd, setstate email")}/>
+      </View>
+      <View style={styles.underline}>
+      </View>
+      <View style={styles.inputView} >
+        <TextInput  
+          secureTextEntry
+          style={styles.inputText}
+          placeholder="Password" 
+          placeholderTextColor="white"
+          onChangeText={text => console.log("tbd, setstate password")}/>
+      </View>
+      <View style={styles.underline}>
+      </View>
+      <TouchableOpacity style={styles.loginBtn}>
+        <Text style={styles.loginText}>Sign Up</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => {navigation.navigate('LoginPage')}}>
+        <Text style={styles.signUpText}>Already have an account?{"\n"}Log in</Text>
+        {/* onPress={() => navigation.navigate(Signup)} */}
+      </TouchableOpacity>
+
+
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
