@@ -10,6 +10,7 @@ import Navigation from './navigation';
 import Profile from './screens/Profile'
 import LoadingPage from './screens/LoadingPage';
 import NotificationPage from './screens/NotificationPage';
+import FollowersPage from './screens/FollowersPage';
 
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <NotificationPage></NotificationPage>
+        <FollowersPage></FollowersPage>
       </SafeAreaProvider>
     );
   }
