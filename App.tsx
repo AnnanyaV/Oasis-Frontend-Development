@@ -11,7 +11,7 @@ import Profile from './screens/Profile'
 import LoadingPage from './screens/LoadingPage';
 import NotificationPage from './screens/NotificationPage';
 import FollowersPage from './screens/FollowersPage';
-
+import SettingsPage from './screens/SettingsPage';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -24,7 +24,7 @@ export default function App() {
       <SafeAreaProvider>
         {/* <Navigation colorScheme={colorScheme} />
         <StatusBar /> */}
-        <FollowersPage></FollowersPage>
+        <SettingsPage></SettingsPage>
       </SafeAreaProvider>
     );
   }
